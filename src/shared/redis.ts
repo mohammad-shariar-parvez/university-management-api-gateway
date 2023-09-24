@@ -10,9 +10,9 @@ redisClient.on('error', (err) => logger.error("Redis Error", err));
 redisClient.on('connect', (data) => logger.info("Redis Connected"));
 
 const connect = async (): Promise<void> => {
-	await redisClient.connect()
-}
+	await redisClient.connect();
+};
 
 export const RedisClient = {
 	connect
-}
+};
